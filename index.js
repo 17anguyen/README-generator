@@ -46,17 +46,16 @@ inquirer
     {
         type: "list",
         message: "What license would you like to use?",
-        choices: ['APACHE2.0', 'GNU General Public License v3.0', 'MIT', 'BS2-Clause "Simplified"', 'None'],
+        choices: ['Apache_2.0', 'GPLv3', 'MIT', 'BSD_2--Clause'],
         name: "License",
-      },
-
+    },
   ])
   .then(answers=>{
     const readmeFormat = 
 
  `
 # ${answers.Title}
-    ${licenseBadge(answers.License)}
+https://img.shields.io/badge/License-${answers.License}-blue.svg
     
 
 ## Table of Contents
