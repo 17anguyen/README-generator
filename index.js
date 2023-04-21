@@ -26,7 +26,7 @@ inquirer
     {
       type: 'input',
       name: 'Contributing',
-      message: 'Who worked with you on this?',
+      message: 'Who worked with you on this? Do you have contribution guidelines?',
     },
     {
       type: 'input',
@@ -80,7 +80,7 @@ https://github.com/${answers.Github}`
 
 
 
-    fs.writeFile("README.md", readmeFormat, (err) =>{
+    fs.writeFile("NewFile.md", readmeFormat, (err) =>{
         if(err) {
             throw err
         }
