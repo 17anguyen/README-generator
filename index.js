@@ -25,60 +25,63 @@ inquirer
     },
     {
       type: 'input',
-      name: 'License',
-      message: 'What is your Github URL?',
-    },
-    {
-      type: 'input',
       name: 'Contributing',
       message: 'Who worked with you on this?',
     },
     {
       type: 'input',
       name: 'Tests',
-      message: 'What is your Github URL?',
+      message: 'Add test instructions',
     },
     {
       type: 'input',
-      name: 'Questions',
-      message: 'What is your Github URL?',
+      name: 'Github',
+      message: 'Lets add your github! What username should I use?',
+    },
+    {
+      type: 'input',
+      name: 'email',
+      message: 'Lets add your email for questions! What email should I use?',
     },
     {
         type: "list",
-        message: "What license did you use?",
+        message: "What license would you like to use?",
         choices: ['APACHE2.0', 'GNU General Public License v3.0', 'MIT', 'BS2-Clause "Simplified"', 'None'],
-        name: "license",
+        name: "License",
       },
 
   ])
   .then(answers=>{
-//     const htmlString = 
+    const readmeFormat = 
 
-//  `<!DOCTYPE html>
-//     <html lang="en">
-//         <head>
-//             <meta charset="UTF-8">
-//             <meta http-equiv="x-UA-Compatible" content="IE=edge">
-//             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-//             <title>Document</title>
-//         </head>
+ `
+# ${answers.Title}
+    ${licenseBadge(answers.License)}
+    
 
-//         <body>
-//             <h1>${answers.user}</h1>>
-//             <h2>${answers.hobby}</h2>
-//             <h2>${answers.location}</h2>
+## Table of Contents
+- [License](#license)  
+- [Description](#description)  
+- [Installation](#installation)
+- [Usage](#usage)
+- [Questions](#questions)
 
-//             <ul>
-//             <li> LinkedIn Profile:<a href="${answers.LinkedIn}"></a></li>
-//             <li> LinkedIn Profile:<a href="${answers.Github}"></a></li>
-//             </ul>
-//         </body>
-//     </html>`
+
+## Description
+    ${answers.Description}
+
+## Installation
+${answers.Installation}
+## Usage
+${answers.Usage}
+## Questions
+You can find my contact information on my GitHub or email me at ${answers.email} if you have any questions!
+https://github.com/${answers.Github}`
     
 
 
 
-    fs.writeFile("README.md", fs.readFile, (err) =>{
+    fs.writeFile("README.md", readmeFormat, (err) =>{
         if(err) {
             throw err
         }
@@ -86,3 +89,15 @@ inquirer
 })
 
 });
+
+
+// descr
+// tbl cont
+// install
+// usaage
+// license
+// coontr
+// tests
+// questions
+// added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
+// GitHub username
