@@ -80,7 +80,7 @@ https://github.com/${answers.Github}`
 
 
 
-    fs.writeFile("NewFile.md", readmeFormat, (err) =>{
+    fs.writeFile("./output/NewFile.md", readmeFormat, (err) =>{
         if(err) {
             throw err
         }

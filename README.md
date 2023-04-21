@@ -9,6 +9,8 @@ The application will be invoked by using the following command:
 node index.js
 ```
 
+image.png
+https://watch.screencastify.com/v/vx5NytKLEzbGWSVNx7ix
 Because this application won’t be deployed, you’ll also need to provide a link to a walkthrough video that demonstrates its functionality. Revisit the Screencastify Tutorial in the prework as a refresher on how to record video from your computer. You’ll need to submit a link to the video _and_ add it to the README of your project.
 
 ## Sources 
